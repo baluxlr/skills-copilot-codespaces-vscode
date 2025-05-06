@@ -1,0 +1,932 @@
+/* DealRoom Extension Main Styles */
+
+:root {
+  --dealroom-primary: #0369a1;
+  --dealroom-primary-light: #7dd3fc;
+  --dealroom-primary-dark: #075985;
+  --dealroom-secondary: #0891b2;
+  --dealroom-success: #16a34a;
+  --dealroom-warning: #eab308;
+  --dealroom-danger: #dc2626;
+  --dealroom-info: #3b82f6;
+  --dealroom-gray: #6b7280;
+  --dealroom-light-gray: #e5e7eb;
+  --dealroom-dark-gray: #374151;
+  --dealroom-border: #d1d5db;
+  --dealroom-background: #f9fafb;
+  --dealroom-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  
+  --dealroom-border-radius: 0.375rem;
+  --dealroom-spacing-xs: 0.25rem;
+  --dealroom-spacing-sm: 0.5rem;
+  --dealroom-spacing-md: 1rem;
+  --dealroom-spacing-lg: 1.5rem;
+  --dealroom-spacing-xl: 2rem;
+}
+
+/* Base Styles */
+.dealroom-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--dealroom-dark-gray);
+  line-height: 1.5;
+}
+
+.dealroom-wrapper * {
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.dealroom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--dealroom-border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.dealroom-btn:hover {
+  opacity: 0.9;
+}
+
+.dealroom-btn:focus {
+  outline: 2px solid var(--dealroom-primary-light);
+  outline-offset: 2px;
+}
+
+.dealroom-btn-primary {
+  background-color: var(--dealroom-primary);
+  color: white;
+}
+
+.dealroom-btn-secondary {
+  background-color: white;
+  color: var(--dealroom-primary);
+  border: 1px solid var(--dealroom-primary);
+}
+
+.dealroom-btn-success {
+  background-color: var(--dealroom-success);
+  color: white;
+}
+
+.dealroom-btn-danger {
+  background-color: var(--dealroom-danger);
+  color: white;
+}
+
+.dealroom-btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.dealroom-btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.dealroom-btn-icon {
+  margin-right: 0.5rem;
+}
+
+/* Cards */
+.dealroom-card {
+  background-color: white;
+  border-radius: var(--dealroom-border-radius);
+  box-shadow: var(--dealroom-box-shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dealroom-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dealroom-card-header {
+  padding: var(--dealroom-spacing-md);
+  border-bottom: 1px solid var(--dealroom-light-gray);
+}
+
+.dealroom-card-body {
+  padding: var(--dealroom-spacing-md);
+}
+
+.dealroom-card-footer {
+  padding: var(--dealroom-spacing-md);
+  border-top: 1px solid var(--dealroom-light-gray);
+}
+
+.dealroom-card-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Badges */
+.dealroom-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.dealroom-badge-primary {
+  background-color: var(--dealroom-primary-light);
+  color: var(--dealroom-primary-dark);
+}
+
+.dealroom-badge-success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.dealroom-badge-warning {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.dealroom-badge-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.dealroom-badge-info {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.dealroom-badge-gray {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Forms */
+.dealroom-form-group {
+  margin-bottom: var(--dealroom-spacing-md);
+}
+
+.dealroom-form-label {
+  display: block;
+  margin-bottom: var(--dealroom-spacing-xs);
+  font-weight: 500;
+}
+
+.dealroom-form-control {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--dealroom-border);
+  border-radius: var(--dealroom-border-radius);
+  background-color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.dealroom-form-control:focus {
+  border-color: var(--dealroom-primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.2);
+}
+
+.dealroom-form-select {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid var(--dealroom-border);
+  border-radius: var(--dealroom-border-radius);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  appearance: none;
+}
+
+.dealroom-form-check {
+  display: flex;
+  align-items: center;
+}
+
+.dealroom-form-check-input {
+  margin-right: var(--dealroom-spacing-xs);
+}
+
+/* Tables */
+.dealroom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dealroom-table th,
+.dealroom-table td {
+  padding: var(--dealroom-spacing-sm) var(--dealroom-spacing-md);
+  border-bottom: 1px solid var(--dealroom-light-gray);
+  text-align: left;
+}
+
+.dealroom-table th {
+  background-color: var(--dealroom-background);
+  font-weight: 600;
+}
+
+.dealroom-table tbody tr:hover {
+  background-color: rgba(3, 105, 161, 0.05);
+}
+
+/* Alert/Messages */
+.dealroom-alert {
+  position: relative;
+  padding: var(--dealroom-spacing-md);
+  margin-bottom: var(--dealroom-spacing-md);
+  border: 1px solid transparent;
+  border-radius: var(--dealroom-border-radius);
+}
+
+.dealroom-alert-success {
+  color: #166534;
+  background-color: #dcfce7;
+  border-color: #bbf7d0;
+}
+
+.dealroom-alert-warning {
+  color: #854d0e;
+  background-color: #fef9c3;
+  border-color: #fef08a;
+}
+
+.dealroom-alert-danger {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-color: #fecaca;
+}
+
+.dealroom-alert-info {
+  color: #1e40af;
+  background-color: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+/* Grids and Layout */
+.dealroom-grid {
+  display: grid;
+  grid-gap: var(--dealroom-spacing-md);
+}
+
+.dealroom-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dealroom-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dealroom-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .dealroom-grid-3,
+  .dealroom-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .dealroom-grid-2,
+  .dealroom-grid-3,
+  .dealroom-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dealroom-flex {
+  display: flex;
+}
+
+.dealroom-flex-col {
+  flex-direction: column;
+}
+
+.dealroom-justify-between {
+  justify-content: space-between;
+}
+
+.dealroom-items-center {
+  align-items: center;
+}
+
+.dealroom-wrap {
+  flex-wrap: wrap;
+}
+
+.dealroom-gap-sm {
+  gap: var(--dealroom-spacing-sm);
+}
+
+.dealroom-gap-md {
+  gap: var(--dealroom-spacing-md);
+}
+
+/* Deal Cards */
+.dealroom-deal-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--dealroom-border-radius);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: var(--dealroom-box-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dealroom-deal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dealroom-deal-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.dealroom-deal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dealroom-deal-card:hover .dealroom-deal-image img {
+  transform: scale(1.05);
+}
+
+.dealroom-deal-badge {
+  position: absolute;
+  top: var(--dealroom-spacing-sm);
+  right: var(--dealroom-spacing-sm);
+  z-index: 1;
+}
+
+.dealroom-deal-content {
+  padding: var(--dealroom-spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dealroom-deal-title {
+  margin-top: 0;
+  margin-bottom: var(--dealroom-spacing-sm);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dealroom-dark-gray);
+}
+
+.dealroom-deal-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dealroom-deal-title a:hover {
+  color: var(--dealroom-primary);
+}
+
+.dealroom-deal-company {
+  margin-bottom: var(--dealroom-spacing-xs);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dealroom-gray);
+}
+
+.dealroom-deal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dealroom-spacing-xs);
+  margin-bottom: var(--dealroom-spacing-sm);
+}
+
+.dealroom-deal-description {
+  margin-bottom: var(--dealroom-spacing-md);
+  font-size: 0.875rem;
+  color: var(--dealroom-gray);
+  flex-grow: 1;
+}
+
+.dealroom-deal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--dealroom-spacing-sm);
+  border-top: 1px solid var(--dealroom-light-gray);
+}
+
+.dealroom-deal-funding {
+  font-weight: 600;
+  color: var(--dealroom-primary);
+}
+
+.dealroom-deal-stage {
+  font-size: 0.75rem;
+  color: var(--dealroom-gray);
+}
+
+/* User Profile */
+.dealroom-profile {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--dealroom-border-radius);
+  box-shadow: var(--dealroom-box-shadow);
+  overflow: hidden;
+}
+
+.dealroom-profile-header {
+  position: relative;
+  padding: var(--dealroom-spacing-lg) var(--dealroom-spacing-md) var(--dealroom-spacing-xl);
+  background-color: var(--dealroom-primary);
+  color: white;
+}
+
+.dealroom-profile-avatar {
+  position: absolute;
+  bottom: -2rem;
+  left: var(--dealroom-spacing-md);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: white;
+  box-shadow: var(--dealroom-box-shadow);
+  overflow: hidden;
+}
+
+.dealroom-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dealroom-profile-title {
+  margin-top: 0;
+  margin-bottom: var(--dealroom-spacing-xs);
+  padding-left: 5rem;
+  font-size: 1.25rem;
+}
+
+.dealroom-profile-subtitle {
+  margin: 0;
+  padding-left: 5rem;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.dealroom-profile-body {
+  padding: var(--dealroom-spacing-xl) var(--dealroom-spacing-md) var(--dealroom-spacing-md);
+}
+
+.dealroom-profile-info {
+  margin-bottom: var(--dealroom-spacing-md);
+}
+
+.dealroom-profile-info-item {
+  display: flex;
+  margin-bottom: var(--dealroom-spacing-sm);
+}
+
+.dealroom-profile-info-label {
+  width: 7rem;
+  font-weight: 500;
+  color: var(--dealroom-gray);
+}
+
+.dealroom-profile-info-value {
+  flex: 1;
+}
+
+.dealroom-profile-bio {
+  margin-top: var(--dealroom-spacing-md);
+  padding-top: var(--dealroom-spacing-md);
+  border-top: 1px solid var(--dealroom-light-gray);
+}
+
+.dealroom-profile-bio h4 {
+  margin-top: 0;
+  margin-bottom: var(--dealroom-spacing-sm);
+  font-size: 1rem;
+}
+
+.dealroom-profile-bio p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Deal Detail */
+.dealroom-deal-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--dealroom-spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .dealroom-deal-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dealroom-deal-main {
+  background-color: white;
+  border-radius: var(--dealroom-border-radius);
+  box-shadow: var(--dealroom-box-shadow);
+  overflow: hidden;
+}
+
+.dealroom-deal-header {
+  position: relative;
+}
+
+.dealroom-deal-image-large {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.dealroom-deal-header-content {
+  padding: var(--dealroom-spacing-md);
+}
+
+.dealroom-deal-title-large {
+  margin-top: 0;
+  margin-bottom: var(--dealroom-spacing-sm);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dealroom-deal-meta-large {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dealroom-spacing-sm);
+  margin-bottom: var(--dealroom-spacing-sm);
+}
+
+.dealroom-deal-sections {
+  padding: var(--dealroom-spacing-md);
+}
+
+.dealroom-deal-section {
+  margin-bottom: var(--dealroom-spacing-lg);
+}
+
+.dealroom-deal-section-title {
+  margin-top: 0;
+  margin-bottom: var(--dealroom-spacing-md);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: var(--dealroom-spacing-xs);
+  border-bottom: 1px solid var(--dealroom-light-gray);
+}
+
+.dealroom-deal-section-content {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.dealroom-deal-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dealroom-spacing-md);
+}
+
+.dealroom-sidebar-card {
+  background-color: white;
+  border-radius: var(--dealroom-border-radius);
+  box-shadow: var(--dealroom-box-shadow);
+  overflow: hidden;
+}
+
+.dealroom-sidebar-card-header {
+  padding: var(--dealroom-spacing-md);
+  background-color: var(--dealroom-primary);
+  color: white;
+}
+
+.dealroom-sidebar-card-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.dealroom-sidebar-card-body {
+  padding: var(--dealroom-spacing-md);
+}
+
+.dealroom-entrepreneur-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dealroom-entrepreneur-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: var(--dealroom-spacing-sm);
+}
+
+.dealroom-entrepreneur-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dealroom-entrepreneur-name {
+  margin: 0 0 var(--dealroom-spacing-xs);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.dealroom-entrepreneur-company {
+  margin: 0 0 var(--dealroom-spacing-sm);
+  font-size: 0.875rem;
+  color: var(--dealroom-gray);
+}
+
+.dealroom-entrepreneur-bio {
+  margin: var(--dealroom-spacing-md) 0 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.dealroom-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dealroom-spacing-sm);
+}
+
+.dealroom-key-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--dealroom-spacing-sm);
+}
+
+.dealroom-metric {
+  padding: var(--dealroom-spacing-sm);
+  background-color: var(--dealroom-background);
+  border-radius: var(--dealroom-border-radius);
+  text-align: center;
+}
+
+.dealroom-metric-value {
+  display: block;
+  margin-bottom: var(--dealroom-spacing-xs);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dealroom-primary);
+}
+
+.dealroom-metric-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--dealroom-gray);
+}
+
+/* Documents Section */
+.dealroom-documents {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dealroom-spacing-sm);
+}
+
+.dealroom-document {
+  display: flex;
+  align-items: center;
+  padding: var(--dealroom-spacing-sm);
+  background-color: var(--dealroom-background);
+  border-radius: var(--dealroom-border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.dealroom-document:hover {
+  background-color: rgba(3, 105, 161, 0.05);
+}
+
+.dealroom-document-icon {
+  margin-right: var(--dealroom-spacing-sm);
+  color: var(--dealroom-primary);
+}
+
+.dealroom-document-info {
+  flex: 1;
+}
+
+.dealroom-document-title {
+  margin: 0 0 var(--dealroom-spacing-xs);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dealroom-document-meta {
+  font-size: 0.75rem;
+  color: var(--dealroom-gray);
+}
+
+.dealroom-document-download {
+  color: var(--dealroom-primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dealroom-document-download:hover {
+  text-decoration: underline;
+}
+
+/* Verified Badge */
+.dealroom-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: var(--dealroom-spacing-xs);
+  border-radius: 50%;
+  background-color: var(--dealroom-primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.dealroom-animate-fade {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.dealroom-animate-slide-right {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+.dealroom-animate-slide-up {
+  animation: slideInUp 0.3s ease forwards;
+}
+
+/* Loading Spinner */
+.dealroom-spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgba(3, 105, 161, 0.3);
+  border-top-color: var(--dealroom-primary);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.dealroom-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--dealroom-spacing-lg);
+  color: var(--dealroom-gray);
+}
+
+.dealroom-loading-text {
+  margin-top: var(--dealroom-spacing-sm);
+  font-size: 0.875rem;
+}
+
+/* Tooltip */
+.dealroom-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.dealroom-tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--dealroom-dark-gray);
+  color: white;
+  text-align: center;
+  border-radius: var(--dealroom-border-radius);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.dealroom-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dealroom-dark-gray) transparent transparent transparent;
+}
+
+.dealroom-tooltip:hover .dealroom-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Empty States */
+.dealroom-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--dealroom-spacing-xl);
+  text-align: center;
+}
+
+.dealroom-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--dealroom-spacing-md);
+  border-radius: 50%;
+  background-color: var(--dealroom-background);
+  color: var(--dealroom-gray);
+  font-size: 2rem;
+}
+
+.dealroom-empty-title {
+  margin: 0 0 var(--dealroom-spacing-sm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dealroom-dark-gray);
+}
+
+.dealroom-empty-description {
+  margin: 0 0 var(--dealroom-spacing-md);
+  color: var(--dealroom-gray);
+}
+
+/* Responsive Utilities */
+@media (max-width: 992px) {
+  .dealroom-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dealroom-grid-3,
+  .dealroom-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dealroom-deal-image {
+    height: 160px;
+  }
+  
+  .dealroom-deal-image-large {
+    height: 240px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dealroom-grid-2,
+  .dealroom-grid-3,
+  .dealroom-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .dealroom-deal-image-large {
+    height: 200px;
+  }
+}
